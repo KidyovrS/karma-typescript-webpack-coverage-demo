@@ -1,5 +1,5 @@
 # karma-typescript-webpack-coverage-demo
 
-## Run tests
+`yarn && yarn test`
 
-`yarn test`
+Coverage would be available at `./coverage`.
