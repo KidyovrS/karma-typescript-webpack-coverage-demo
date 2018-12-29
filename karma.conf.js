@@ -1,20 +1,14 @@
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
-    frameworks: ['mocha'],
-    files: [
-      'test/index.js'
-    ],
-    preprocessors: {
-      'test/index.js': 'webpack'
-    },
-    webpack: require('./webpack.config.karma.js'),
-    reporters: ['mocha', 'coverage-istanbul'],
+    frameworks: ["mocha"],
+    files: ["test/bundle.js"],
+    reporters: ["mocha", "coverage-istanbul"],
     coverageIstanbulReporter: {
-      reports: ['html', 'json-summary'],
+      reports: ["html", "json-summary"],
       combineBrowserReports: true,
       fixWebpackSourcePaths: true
     },
-    browsers: ['Chrome'],
+    browsers: ["Chrome"],
     singleRun: true
-  })
-}
+  });
+};
